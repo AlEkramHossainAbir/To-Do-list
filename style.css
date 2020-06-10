@@ -49,11 +49,8 @@ ul{
 span{
     margin-right: 150px;
 }
-.fa-trash{
-    margin-left: 10px;
-    display: inline;
+.fa-trash-o{
     float: right;
-    position: absolute;
 }
 #inputbox{
     width: 250px;
@@ -79,9 +76,6 @@ span{
     color: tomato;
     transform: rotate(90deg);
 }
-.fa-trash{
-    color: black;
-}
-.fa-trash:hover{
+.fa-trash-o:hover{
     color:rgb(236, 87, 87);
 }
