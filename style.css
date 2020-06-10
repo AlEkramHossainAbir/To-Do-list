@@ -18,6 +18,14 @@
     margin-right: 10px;
     float: right;
 }
+#date{
+    font-size: 2rem;
+    color: rgb(148, 241, 164);
+    padding-top: 8rem;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
+    padding-left: 1rem;
+}
 #show{
     border: 0px;
     width: auto;
