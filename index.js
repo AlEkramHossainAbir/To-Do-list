@@ -10,8 +10,8 @@ let clear = document.getElementById("clear");
 //let del = document.getElementsByClassName("fa-trash-o");
 let date = {weekday: "long" , month: "short" , day: "numeric"};
 let today = new Date();
-const CHECK = "fa-check-circle";
-const UNCHECK ="fa-circle-thin";
+const CHECK = document.getElementsByClassName("fa-check-circle");
+const UNCHECK =document.getElementsByClassName("fa-circle-thin");
 const LINE_THROUGH = "lineThrough";
 // let month = today.getMonth();
 // let date = today.getDate();
@@ -22,10 +22,7 @@ time.innerHTML = today.toLocaleDateString("en-US",date);
 
 
 addToDo = (toDo,id, done, trash) =>{
-    if(trash){return;}
-    const DONE = done ? CHECK: UNCHECK;
-    const LINE = done ? LINE_THROUGH : " ";
-    let text =  `<li><i class="fa ${DONE}" job="complete" id="${id}"></i><span class="text ${LINE}">${toDo}</span><i class="fa fa-trash-o de" id="${id}" job="delete" onclick="del()"></i></li>`;
+    let text =  `<li><i class="fa fa-circle-thin" job="complete" id="${id}"></i><span class="text lineThrough">${toDo}</span><i class="fa fa-trash-o de" id="${id}" job="delete" onclick="del(id)"></i></li>`;
     let position = "beforeend";
     list.insertAdjacentHTML(position,text);
 } 
@@ -42,9 +39,10 @@ input.addEventListener("keypress", (task) =>{
                 done: false,
                 trash:false
             });
+            id++;
         }
         input.value = "";
-        id++;
+        
 
     }
     
@@ -53,6 +51,9 @@ clear.addEventListener("click",()=>{
     list.innerHTML= "";
 })
 
-del =() =>{
-    alert("del");
+del =(op) =>{
+    alert(op);
+    console.log(LIST[op]);
+    var x= LIST[op];
+    console.log(LIST.splice(op,op+1))
 }
