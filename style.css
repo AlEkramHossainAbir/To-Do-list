@@ -50,6 +50,7 @@ span{
     margin-left: 10px;
     display: inline;
     float: right;
+    position: absolute;
 }
 #inputbox{
     width: 250px;
