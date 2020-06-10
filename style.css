@@ -17,7 +17,10 @@
     margin-top: 10px;
     margin-right: 10px;
     float: right;
+    transition:transform 500ms;
+
 }
+
 #date{
     font-size: 2rem;
     color: rgb(148, 241, 164);
@@ -67,12 +70,14 @@ span{
 .fa-plus-circle{
     color: rgb(18, 123, 172);
     margin-top: 10px;
+    transition:transform 500ms;
 }
 .fa-plus-circle:hover{
     color: rgb(36, 99, 218);
 }
 .fa-sync-alt:hover{
     color: tomato;
+    transform: rotate(90deg);
 }
 .fa-trash{
     color: black;
