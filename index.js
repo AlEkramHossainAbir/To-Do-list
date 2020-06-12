@@ -50,9 +50,5 @@ clear.addEventListener("click",()=>{
     list.innerHTML= "";
 })
 del =(id) =>{
-    alert(id);
-    if(id==0){
-        alert("You Can not delete this item now, First Delete other items")
-    }
     list.removeChild(list.childNodes[id]);
 }
