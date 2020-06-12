@@ -5,7 +5,7 @@
     width: 404px;
     height: 650px;
     margin: 2rem auto;
-    background-color: rgba(209, 211, 201, 0.979);
+    background-color: #7EC0EE;
 }
 #image{  
     width: auto;
@@ -23,10 +23,10 @@
 
 #date{
     font-size: 2rem;
-    color: rgb(148, 241, 164);
+    color: #FFFF00 ;
     padding-top: 8rem;
     font-family: 'Anton', sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     padding-left: 1rem;
 }
 #show{
@@ -36,7 +36,7 @@
     /* font-family: 'Piedra', cursive; */
     font-family: 'Anton', sans-serif;
     font-size: 25px;
-    color: rgb(43, 41, 196);
+    color: #000080;
     display: flex;
     text-align: justify;  
 }
@@ -65,17 +65,17 @@ span{
     color: rgb(126, 64, 64);
 }
 .fa-plus-circle{
-    color: rgb(18, 123, 172);
+    color: #0e3a0e;
     margin-top: 10px;
     transition:transform 500ms;
 }
 .fa-plus-circle:hover{
-    color: rgb(36, 99, 218);
+    color: rgb(2, 18, 49);
 }
 .fa-sync-alt:hover{
     color: tomato;
     transform: rotate(90deg);
 }
 .fa-trash-o:hover{
-    color:rgb(236, 87, 87);
+    color:rgb(219, 45, 45);
 }

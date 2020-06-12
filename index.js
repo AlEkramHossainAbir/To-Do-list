@@ -7,8 +7,7 @@ var input = document.getElementById("input");
 let list = document.getElementById("list");
 let time = document.getElementById("date");
 let clear = document.getElementById("clear");
-//let del = document.getElementsByClassName("fa-trash-o");
-let date = {weekday: "long" , month: "short" , day: "numeric"};
+let date = {weekday: "long" , month: "short" , day: "numeric" , year: "numeric"};
 let today = new Date();
 const CHECK = document.getElementsByClassName("fa-check-circle");
 const UNCHECK =document.getElementsByClassName("fa-circle-thin");
@@ -19,10 +18,10 @@ const LINE_THROUGH = "lineThrough";
 // let output = `${date}/${month + 1}/${year}`;
 // time.innerHTML = output;
 time.innerHTML = today.toLocaleDateString("en-US",date);
-
+let text;
 
 addToDo = (toDo,id, done, trash) =>{
-    let text =  `<li><i class="fa fa-circle-thin" job="complete" id="${id}"></i><span class="text lineThrough">${toDo}</span><i class="fa fa-trash-o de" id="${id}" job="delete" onclick="del(id)"></i></li>`;
+   text =  `<li id="ok ${id}" ><i class="fa fa-circle-thin" job="complete" id="${id}"></i><span class="text lineThrough">${toDo}</span><i class="fa fa-trash-o de" id="${id}" job="delete" onclick="del(id,text)"></i></li>`;
     let position = "beforeend";
     list.insertAdjacentHTML(position,text);
 } 
@@ -33,12 +32,12 @@ input.addEventListener("keypress", (task) =>{
          store = input.value;
         if (store) {
             addToDo(store,id,false,false); 
-            LIST.push({
-                name: store,
-                id:id,
-                done: false,
-                trash:false
-            });
+            // LIST.push({
+            //     name: store,
+            //     id:id,
+            //     done: false,
+            //     trash:false
+            // });
             id++;
         }
         input.value = "";
@@ -50,10 +49,10 @@ input.addEventListener("keypress", (task) =>{
 clear.addEventListener("click",()=>{
     list.innerHTML= "";
 })
-
-del =(op) =>{
-    alert(op);
-    console.log(LIST[op]);
-    var x= LIST[op];
-    console.log(LIST.splice(op,op+1))
+del =(id) =>{
+    alert(id);
+    if(id==0){
+        alert("You Can not delete this item now, First Delete other items")
+    }
+    list.removeChild(list.childNodes[id]);
 }
